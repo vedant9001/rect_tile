@@ -5,13 +5,18 @@ using namespace std;
 int arr[2][100];
 int memo,sum=0;
 int l,prod;int var=0;
+int digit[100];int k=0;
 
-void print_ans(){
+void process_ans(){
     for(int x=l;x>=1;x--)
         for(int y=0;y<arr[0][x];y++)
-            cout<<x<<",";
-    cout<<" :  dig :: "<<memo;
-    cout<<endl;
+        {digit[k]=x; k++;} 
+    digit[k--]=0;
+    if((digit[0]+digit[1])<=lrg)
+    for(int x=0;x<=k;x++)
+    {cout<<digit[k]<<", ";
+    cout<<"digs ::"<<k+1<<endl;}
+    
 }
 
 int recur(int start,int dig)
@@ -40,7 +45,7 @@ int recur(int start,int dig)
      
     else if(sum==prod)
    {
-     print_ans();
+     process_ans();
        
       // do the later part here 
    }     
