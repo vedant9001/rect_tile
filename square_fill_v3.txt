@@ -15,10 +15,10 @@ void process_ans(){
         {digit[k]=x; k++;} 
     digit[k--]=0;
     if((digit[0]+digit[1])<=lrg)
-    for(int x=0;x<=k;x++)
-    {cout<<digit[k]<<", ";
+    {for(int x=0;x<=k;x++)
+    cout<<digit[k]<<", ";
     cout<<"digs ::"<<k+1<<endl;}
-    
+    k=0;
 }
 
 int recur(int start,int dig)
