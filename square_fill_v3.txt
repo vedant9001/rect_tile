@@ -6,6 +6,8 @@ int arr[2][100];
 int memo,sum=0;
 int l,prod;int var=0;
 int digit[100];int k=0;
+int lrg;
+
 
 void process_ans(){
     for(int x=l;x>=1;x--)
@@ -71,9 +73,9 @@ int main()
     prod=a*b;
     
     if(a<b)
-        l=a;
+        {l=a; lrg=b;}
     else
-        l=b;
+        {l=b; lrg=a;}
     
     for(i=1;i<=l;i++)
     {   
